@@ -85,5 +85,17 @@ router.patch('/change/:id', async (req, res) => {
     }
 });
 
+router.get('/', async (req, res) => {
+    try {
+        const racao = await Racao.find()
+        let montante = 0;
+        for(let i= 0; i <= racao.length -1; i++){
+            montante += racao[i].price*racao[i].quantity;
+        }
+        res.json(montante)
+    } catch (err) {
+        
+    }
+})
 
 module.exports = app => app.use('/racao', router)
