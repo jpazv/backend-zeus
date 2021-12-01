@@ -4,6 +4,7 @@ const Racao = require('../models/racao');
 
 const router = express.Router();
 
+
 router.post('/register', async (req, res) => {
     
     try {

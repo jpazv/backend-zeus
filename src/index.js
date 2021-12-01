@@ -16,5 +16,8 @@ app.get ('/', (req, res) => {
 });
 
 require('../src/controllers/racaoController')(app);
+require('../src/controllers/authController')(app);
+require('../src/controllers/projectController')(app)
+
 
 app.listen(3001);

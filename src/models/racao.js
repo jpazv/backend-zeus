@@ -16,9 +16,6 @@ const RacaoSchema = new mongoose.Schema({
         required: true
     },
 
-    // createdAt: {
-    //     type: Date
-    // }
 },
     {timestamps: true}
 
